@@ -1,7 +1,11 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import os
 import re
+
+import gi
+gi.require_version('Gtk', '3.0')
+gi.require_version('PangoCairo', '1.0')
 from gi.repository import Gtk, Gdk, Pango, PangoCairo, GLib
 
 

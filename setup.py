@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(name='desktop_nagger',
       version='0.1',
@@ -7,8 +7,12 @@ setup(name='desktop_nagger',
       author='Alexey Lebedeff',
       author_email='binarin@gmail.com',
       license='MIT',
-      packages=['desktop_nagger'],
-      install_requires=[
-          "pygtk"
-      ],
-      zip_safe=False)
+      packages=find_packages(),
+      # install_requires=[
+      #     "pygtk >= 2.24.0"
+      # ],
+      entry_points="""
+      [console_scripts]
+      desktop-nagger = desktop_nagger:main
+      """,
+      include_package_data=True)
