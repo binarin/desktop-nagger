@@ -9,7 +9,9 @@ python3Packages.buildPythonPackage rec {
 
   nativeBuildInputs = [
     wrapGAppsHook
+    gobjectIntrospection
   ];
+
   buildInputs = [
     gtk3
   ];
