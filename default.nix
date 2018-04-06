@@ -7,8 +7,10 @@ python3Packages.buildPythonPackage rec {
   name = "desktop-nagger-${version}";
   src = ./.;
 
-  buildInputs = [
+  nativeBuildInputs = [
     wrapGAppsHook
+  ];
+  buildInputs = [
     gtk3
   ];
 
