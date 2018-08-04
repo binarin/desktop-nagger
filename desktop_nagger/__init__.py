@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import os
 import re
+from time import sleep
 
 import gi
 gi.require_version('Gtk', '3.0')
@@ -66,6 +67,7 @@ def main():
     os.close(0)
     os.close(1)
     os.close(2)
+    sleep(1.0)
     screen = Gdk.Screen.get_default()
     n_monitors = screen.get_n_monitors()
     for i in range(n_monitors):
